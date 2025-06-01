@@ -84,34 +84,36 @@ orderDetailsSchema.pre("save", async function (next) {
   }
 
   // If order is marked as served, update chef & table
-  if (this.isModified("status") && this.status === "served") {
-    const Chef = require("./chefModels");
-    const Tables = require("./tablesModel");
+if (this.isModified("status") && this.status === "served") {
+  const Chef = require("./chefModels");
+  const Tables = require("./tablesModel");
 
-    try {
-      await Chef.findByIdAndUpdate(
-        this.chefId,
-        [
-          {
-            $set: {
-              orders: {
-                $cond: {
-                  if: { $gt: ["$orders", 0] },
-                  then: { $subtract: ["$orders", 1] },
-                  else: 0
-                }
-              },
-              timeRemaining: {
-                $cond: {
-                  if: { $gt: ["$timeRemaining", this.cookingTime] },
-                  then: { $subtract: ["$timeRemaining", this.cookingTime] },
-                  else: 0
-                }
-              }
-            }
-          }
-        ]
-      );
+  try {
+    // Atomically decrement but never let the fields drop below 0:
+    // await Chef.findByIdAndUpdate(
+    //   this.chefId,
+    //   [
+    //     {
+    //       $set: {
+    //         orders: {
+    //           // new orders = max( 0, old orders - 1 )
+    //           $max: [
+    //             0,
+    //             { $subtract: ["$orders", 1] }
+    //           ]
+    //         },
+    //         timeRemaining: {
+    //           // new timeRemaining = max( 0, old timeRemaining - cookingTime )
+    //           $max: [
+    //             0,
+    //             { $subtract: ["$timeRemaining", this.cookingTime] }
+    //           ]
+    //         }
+    //       }
+    //     }
+    //   ],
+    //   { new: true }
+    // );
 
       // Free table if DineIn
       if (this.orderType === "DineIn" && this.tableNum !== null) {
