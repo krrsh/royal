@@ -1,0 +1,68 @@
+.tablesStatusContainer {
+  background-color: var(--primary);
+  border-radius: 8px;
+  width: 400px;
+  height: 280px;
+  font-family: "Inter";
+  border: #d9d9d9 solid 3px;
+}
+.tablesStatusContainer .tablesStatusTitleSection {
+  display: flex;
+  padding: 10px 10px 0 10px;
+}
+.tablesStatusContainer .tablesStatusTitleText {
+  color: #6e6e6e;
+  font-size: 14px;
+}
+.tablesStatusContainer .statusDot {
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+.tablesStatusContainer .reserved {
+  background-color: #3dc35f;
+}
+.tablesStatusContainer .statusContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  gap: 20px;
+}
+.tablesStatusContainer .statusContainer .tableStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.tableStatus .statusText {
+  font-size: 8px;
+}
+.tablesStatusContainer .tablesDataContent {
+  display: flex;
+  height: 75%;
+  padding: 10px 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  scrollbar-color: #d9d9d9 transparent;
+  align-content: flex-start;
+}
+.tablesStatusContainer .tablesDataContent .tableData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  height: 30px;
+  width: 30px;
+  border: #bababa solid 1px;
+  border-radius: 4px;
+}
+.tablesStatusContainer .tablesDataContent .tableData .tableNumber {
+  font-size: 18px;
+  font-family: "Lato";
+  font-weight: bold;
+}

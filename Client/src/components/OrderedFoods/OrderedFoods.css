@@ -1,0 +1,97 @@
+.orderedFoodConatiner{
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+}
+.orderedPic{
+    border-radius: 12px;
+    border: #D9D9D9 solid 8px;
+    width: 200px;
+}
+.orderdFoodDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    justify-content: space-between;
+    width: 70%;
+}
+.orderedFoodName{
+    font-size: 18px;
+    font-weight: 500;
+}
+.orderdFoodPrice{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #272727;
+}
+.dltFoodBtn{
+    position: absolute;
+    background-color: #E04444;
+    border-radius: 100%;
+    padding: 5px;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out ;
+}
+.dltFoodBtn:hover{
+    background-color: #c10000;
+    transform: scale(1.05);
+}
+.orderedFoodCount{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.orderedFoodCount .plus{
+    border: #10101090 solid 1px;
+    padding: 2px 8px 4px 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.orderedFoodCount .minus{
+    border: #1010104a solid 1px;
+    padding: 2px 10px 4px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #1010104a;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:800px) {
+    .orderedPic{
+        border-radius: 10px;
+        border: #D9D9D9 solid 6px;
+        width: 100px;
+    }
+    .orderedFoodName{
+        font-size: 12px;;
+    }
+    .orderdFoodPrice{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .inches{
+        font-size: 8px;
+    }
+    .orderedFoodCount{
+        right: 2px;
+        bottom: 2px;
+    }
+    .orderedFoodCount .plus{
+        padding: 0px 4px 0px 4px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+    .orderedFoodCount .minus{
+        padding: 0px 4px 0px 4px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+}

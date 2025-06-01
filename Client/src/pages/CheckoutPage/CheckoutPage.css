@@ -1,0 +1,310 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.checkoutPageContainer{
+    width: 50%;
+    margin: auto;
+    padding: 10px 0;
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-around;
+    background-color: #FFF;
+}
+.searchMenuInput{
+    outline: none;
+    border: none;
+    padding: 15px 0 15px 50px;
+    border-radius: 8px;
+    width: 92%;
+    background-color: var(--primary);
+}
+.searchMenuInput, .searchMenuInput::placeholder{
+    color: #AFABAF;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+.searchMenuContainer{
+    position: relative;
+    padding: 0 10px;
+}
+.searchMenuContainer .searchMenuBtn{
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    bottom: 15px;
+    left: 20px;
+    cursor: pointer;
+}
+.instructions{
+    color: #8C7B7B;
+    font-size: 12px;
+    border-bottom: #C4C4C4 dashed 2px;
+    padding-bottom: 5px;
+    width: fit-content;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.instructions:hover{
+    color: rgb(61, 61, 61);
+    font-weight: 400;
+    border-bottom: #959595 dashed 2px;
+}
+.orderTypeBtnContainer{
+    padding: 5px;
+    background-color: #E4E4E4;
+    border-radius: 40px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+.dineInOpt, .takeAwayOpt{
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 50%;
+    cursor: pointer;
+}
+.totalPriceContainer{
+    background-color: #fff48f24;
+    padding: 10px;
+    margin-bottom: -22px;
+}
+.deliveryText{
+    border-bottom: #817070 dashed 1px;
+    padding-bottom: 2px;
+}
+.pricedetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+.grandpricedetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-top: 10px;
+}
+.pricedetails p{
+    color: #817070;
+    font-size: 12px;
+}
+.yourDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0px 20px;
+    margin: -10px 0;
+}
+.checkoutPageContainer hr{
+    height: 4px;
+    background-color: #E5E5E5;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.addressDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    margin: -10px 0;
+}
+.addressDetailsContainer div{
+    display: flex;
+    gap: 10px;
+}
+.addressDetailsContainer div p{
+    font-size: 11px;
+}
+
+
+.InstructionsOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1.5px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  .overlayCloseBtn{
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .overlayCloseBtn:hover{
+    background-color: #363636;
+  }
+  .instructionBoxContainer {
+    width: 50%;
+    font-family: 'Inter';
+    background-color: var(--primary);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .instctionsTextarea{
+    width: 90%;
+    font-family: 'Inter';
+    height: 80px;
+    box-sizing: border-box;
+    border: #C7C7C7 solid 1px;
+    outline: #FFFFFF solid 10px;
+    margin: 10px 20px;
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--primary);
+  }
+  .instructionsTexts{
+    color: #6E6E6E;
+    font-size: 10px;
+    font-weight: 200;
+    margin: 0 20px;
+    text-align: center;
+  }
+  .instructionActions {
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    padding: 5px 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .instructionActions button {
+    padding: 10px 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Inter';
+  }
+  
+  .instructionActions button:first-child {
+    background-color: var(--primary);
+    color: #505050;
+  }
+  
+  .instructionActions button:last-child {
+    background-color: #505050;
+    color: var(--primary);
+  }
+  .userDetailsInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .userDetailsInput input{
+    width: 50%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #dcdcdc;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  .detaislSaveBtn{
+    width: 30%;
+    border: none;
+    outline: none;
+    background-color: rgb(157, 190, 157);
+    padding: 4px 0px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .yourAddressContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+  .addressInput input{
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #dcdcdc;
+    font-size: 10px;
+    padding: 10px 10px;
+  }
+  .addressInput{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .addressSaveBtn{
+    border: none;
+    outline: none;
+    background-color: rgb(157, 190, 157);
+    padding: 6px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+  }
+
+
+
+
+
+@media screen and (max-width:800px) {
+    .checkoutPageContainer{
+        width: 100%;
+        margin: auto;
+        padding: 10px 0;
+        font-family: 'Inter';
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: space-around;
+        background-color: #FFF;
+    }
+    .searchMenuContainer{
+        position: relative;
+    }
+    .searchMenuContainer .searchMenuBtn{
+        height: 12px;
+        width: 12px;
+        bottom: 10px;
+    }
+    .searchMenuInput{
+        border-radius: 6px;
+        width: 85%;
+        padding: 10px 0 10px 40px;
+    }
+    .instructions{
+        font-size: 10px;
+        padding-bottom: 2px;
+    }
+    .instructionBoxContainer {
+        width: 100%;
+        font-family: 'Inter';
+        background-color: var(--primary);
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 auto;
+        border-radius: 20px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+      }
+}

@@ -1,0 +1,101 @@
+.ordersInfoCard {
+  font-family: "Inter";
+  width: 185px;
+  height: 270px;
+  border-radius: 12px;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderNumContainer {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.orderNumContainer .itemNumber {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeLeftContainer {
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+}
+
+.takeAwayContainer {
+  position: relative;
+  width: 76px;
+}
+.takeAwayBtn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.takeAwayContainer p:hover {
+  text-decoration: underline;
+}
+.takeAwayBtn:hover {
+  scale: 1.02;
+}
+.ddArrBtn {
+  position: absolute;
+  height: 8px;
+  top: 8px;
+  left: 74px;
+  cursor: pointer;
+}
+.statusOptionsDD {
+  position: absolute;
+  background-color: #ced9dc;
+  width: 100px;
+  right: -12px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #939494 solid 1px;
+  border-radius: 5px;
+  padding: 2px 0;
+}
+
+.foodItemsContainer {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+}
+.foodItemsContainer::-webkit-scrollbar {
+  width: 2px;
+}
+.foodItemsContainer p {
+  font-size: 10px;
+}
+.orderStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  justify-content: center;
+  width: fit-content;
+}

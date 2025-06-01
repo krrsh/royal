@@ -1,0 +1,42 @@
+.swipe-track {
+  position: relative;
+  height: 50px;
+  border-radius: 100px;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 15px;
+  border: #949494 solid 2px;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.swipe-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+  color: #949494;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swipe-handle {
+  width: 60px;
+  height: 60px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  touch-action: pan-y;
+  transition: background 0.3s;
+}
+.swipe-handle:hover {
+  background: #c9c9c9;
+}

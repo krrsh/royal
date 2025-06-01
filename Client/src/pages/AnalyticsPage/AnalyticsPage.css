@@ -1,0 +1,134 @@
+p{
+    margin: 0;
+}
+.analysticsPageContainer{
+    height: 100%;
+    display: flex;
+    gap: 10px;
+}
+.filterContainer{
+    position: relative;
+    margin: 5px 10px;
+    width: 400px;
+    height: fit-content;
+}
+.filterContainer .filterInput{
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+.filterContainer .filterInput, .filterContainer .filterInput::placeholder{
+    color: #AFABAF;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+.filterContainer .ddArrow{
+    position: absolute;
+    background-color: var(--primary);
+    border-radius: 100%;
+    height: 15px;
+    width: 20px;
+    padding: 10px;
+    bottom: 6px;
+    right: -20px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+}
+.filterContainer.active .ddArrow{
+    transform: rotate(-180deg);
+}
+.filterContainer .ddArrow:hover{
+    background-color: #D9D9D9;
+}
+.filterOptionsContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+    border: #eee solid 2px;
+    width: 400px;
+    background-color: #FFFF;
+    margin: 0 0 0 10px;
+    top: 60px;
+    position: absolute;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+.filterOptionsContainer.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.filterOptionsContainer .filterOptions{
+    border: none;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #AFABAF;
+}
+.filterOptionsContainer .filterOptions:hover{
+    background-color: var(--primary);
+}
+.analyticsContent{
+    background-color: #FFFF;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15px;
+    padding-bottom: 25px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.analyticsContent .heading{
+    font-family: 'Inter';
+    color: #565656;
+    font-size: 18px;
+}
+.totalDataContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.analyticsDataContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.chefDetailsContainer{
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 100%;
+    font-family: 'Inter';
+}
+.chefDetailsContainer .chefDetailsTitle{
+    display: flex;
+    gap: 200px;
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px ;
+    font-weight: bold;
+}
+.chefDetailsContainer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.chefRow{
+    display: flex;
+    gap: 200px;
+    border-top: #DDDDDD solid 1px;
+    padding: 10px;
+}
+
+
+
+

@@ -1,0 +1,32 @@
+.ordersPageContainer{
+    height: 89vh;
+    display: flex;
+    gap: 10px;
+}
+.ordersPageContent{
+    background-color: #FFF;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    height: 86vh;
+}
+.ordersPageContent .orderPageHeading{
+    font-size: 20px;
+    font-family: 'Inter';
+    color: #565656;
+    font-weight: 600;
+    padding-left: 20px;
+}
+.ordersPageContent .ordersDataContainer{
+    padding: 10px 100px;
+    display: flex;
+    align-content: flex-start;
+    column-gap: 60px;
+    row-gap: 20px;
+    height: 80vh;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.ordersPageContent .ordersDataContainer::-webkit-scrollbar{
+    width: 2px;
+}

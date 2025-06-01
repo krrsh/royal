@@ -1,0 +1,42 @@
+.singleTable {
+  background-color: var(--primary);
+  width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: #bababa solid 2px;
+}
+.singleTable .tableText {
+  font-family: "Poppins";
+  font-size: 24px;
+}
+.singleTable .tableNumber {
+  font-family: "Lato";
+  font-size: 38px;
+  font-weight: bold;
+}
+.singleTable .deleteImg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.singleTable .chairDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.chairDetails .chairNumber {
+  font-family: "Lato";
+  font-size: 10px;
+  font-weight: bold;
+}

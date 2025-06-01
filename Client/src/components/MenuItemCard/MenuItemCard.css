@@ -1,0 +1,81 @@
+.fooditemCard {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.foodNameContainer .foodName {
+  font-size: 16px;
+}
+.foodNameContainer .foodPrice {
+  font-size: 14px;
+}
+.fooditemCard .foodImage {
+  height: 100px;
+  width: 175px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: block;
+}
+.foodNameContainer {
+  width: 155px;
+  height: 60px;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.addItemBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 30px;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.imageGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background: linear-gradient(to top, white, transparent);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 675px) {
+  .fooditemCard {
+    border-radius: 6px;
+  }
+  .foodNameContainer {
+    width: 120px;
+    height: 40px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .foodNameContainer .foodName {
+    font-size: 13px;
+  }
+  .foodNameContainer .foodPrice {
+    font-size: 10px;
+  }
+  .fooditemCard .foodImage {
+    width: 140px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  .addItemBtn {
+    width: 20px;
+    right: 5px;
+    top: 12px;
+  }
+}

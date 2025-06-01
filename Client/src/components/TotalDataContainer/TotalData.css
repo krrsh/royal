@@ -1,0 +1,35 @@
+.dataContainer{
+    font-family: 'Inter';
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    width: 200px;
+    height: 80px;
+    padding: 10px;
+    border: #D9D9D9 solid 3px;
+    border-radius: 8px;
+}
+.dataContainer .analyticsData{
+    display: flex;
+    flex-direction: column;
+}
+.dataContainer .analyticsData .count{
+    font-size: 18px;
+    color: #626262;
+}
+.dataContainer .analyticsData .dataHeading{
+    font-size: 8px;
+    color: #666666;
+    font-weight: bold;
+}
+.dataContainer img{
+    height: 50px;
+}
+.dataContainer .revenue{
+    background-color: #E0EFFF;
+    padding: 10px 20px;
+    border-radius: 40%;
+    height: 30px;
+}
