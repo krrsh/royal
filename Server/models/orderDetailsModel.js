@@ -89,17 +89,29 @@ orderDetailsSchema.pre("save", async function (next) {
     const Tables = require("./tablesModel");
 
     try {
-      const chef = await Chef.findById(this.chefId);
-
-      if (chef) {
-        const updatedOrders = Math.max(0, chef.orders - 1);
-        const updatedTimeRemaining = Math.max(0, chef.timeRemaining - this.cookingTime);
-      
-        await Chef.findByIdAndUpdate(this.chefId, {
-          orders: updatedOrders,
-          timeRemaining: updatedTimeRemaining,
-        });
-      }
+      await Chef.findByIdAndUpdate(
+        this.chefId,
+        [
+          {
+            $set: {
+              orders: {
+                $cond: {
+                  if: { $gt: ["$orders", 0] },
+                  then: { $subtract: ["$orders", 1] },
+                  else: 0
+                }
+              },
+              timeRemaining: {
+                $cond: {
+                  if: { $gt: ["$timeRemaining", this.cookingTime] },
+                  then: { $subtract: ["$timeRemaining", this.cookingTime] },
+                  else: 0
+                }
+              }
+            }
+          }
+        ]
+      );
 
       // Free table if DineIn
       if (this.orderType === "DineIn" && this.tableNum !== null) {
