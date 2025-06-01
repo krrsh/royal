@@ -44,7 +44,7 @@ const SwipeToOrder = () => {
       //If there's no table and this is a DineIn order, abort:
       if (order.orderType === "DineIn") {
         try {
-          const res = await axios.get("http://localhost:4000/api/tables");
+          const res = await axios.get("https://royal-xy66.onrender.com/api/tables");
           const tablesList = res.data;
           const availableTables = tablesList.filter(
             (table) => table.status === "available"
@@ -93,7 +93,7 @@ const SwipeToOrder = () => {
       //logic to post data in the DB
       try {
         const response = await axios.post(
-          "http://localhost:4000/api/orderDetails",
+          "https://royal-xy66.onrender.com/api/orderDetails",
           order
         );
         console.log("Order posted successfully:", response.data);

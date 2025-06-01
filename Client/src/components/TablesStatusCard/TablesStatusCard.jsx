@@ -9,7 +9,7 @@ const TablesStatusCard = () => {
   // Fetch tables on mount or after changes
   const fetchTables = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/tables");
+      const res = await axios.get("https://royal-xy66.onrender.com/api/tables");
       setTables(res.data);
     } catch (err) {
       console.error("Error fetching tables:", err);

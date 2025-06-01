@@ -32,7 +32,7 @@ const MenuItemCard = ({ name, price, imgUrl, id, category, cookingTime }) => {
       <div className="imageWrapper">
         <img
           className="foodImage"
-          src={`http://localhost:4000${imgUrl}`}
+          src={`https://royal-xy66.onrender.com${imgUrl}`}
           alt="foodImg"
         />
         <div className="imageGradient"></div>

@@ -29,7 +29,7 @@ const MenuPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/foodItems");
+        const res = await axios.get("https://royal-xy66.onrender.com/api/foodItems");
         setFoodItems(res.data);
       } catch (err) {
         console.error("Error fetching food items:", err);

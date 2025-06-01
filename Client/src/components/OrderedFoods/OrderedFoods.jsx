@@ -40,7 +40,7 @@ const OrderedFoods = ({ item }) => {
     <div className="orderedFoodConatiner">
       <img
         className="orderedPic"
-        src={`http://localhost:4000${item.imgUrl}`}
+        src={`https://royal-xy66.onrender.com${item.imgUrl}`}
         alt="Img"
       />
       <div className="orderdFoodDetails">

@@ -32,9 +32,9 @@ const OrderSummaryCard = () => {
     const fetchOrderStats = async () => {
       try {
         const [servedRes, dineInRes, takeAwayRes] = await Promise.all([
-          axios.get("http://localhost:4000/api/totaldata/served"),
-          axios.get("http://localhost:4000/api/totaldata/dinein"),
-          axios.get("http://localhost:4000/api/totaldata/takeaway"),
+          axios.get("https://royal-xy66.onrender.com/api/totaldata/served"),
+          axios.get("https://royal-xy66.onrender.com/api/totaldata/dinein"),
+          axios.get("https://royal-xy66.onrender.com/api/totaldata/takeaway"),
         ]);
         setServedStats({
           daily: servedRes.data.daily || 0,

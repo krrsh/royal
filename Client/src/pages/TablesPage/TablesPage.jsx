@@ -6,7 +6,7 @@ import addTable from "../../assets/addTable.png";
 import SingleTable from "../../components/SingleTable/SingleTable";
 import axios from "axios";
 
-const API_BASE = "http://localhost:4000/api/tables";
+const API_BASE = "https://royal-xy66.onrender.com/api/tables";
 
 const TablesPage = () => {
   const [tables, setTables] = useState([]);

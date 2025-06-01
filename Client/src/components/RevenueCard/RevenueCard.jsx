@@ -101,7 +101,7 @@ const RevenueCard = () => {
     (async () => {
       try {
         const res = await axios.get(
-          "http://localhost:4000/api/totaldata/graph-revenue"
+          "https://royal-xy66.onrender.com/api/totaldata/graph-revenue"
         );
         setOrders(res.data);
       } catch (err) {

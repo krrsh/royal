@@ -25,7 +25,7 @@ const AnalyticsPage = () => {
   useEffect(() => {
     //Fetch total revenue
     axios
-      .get("http://localhost:4000/api/totaldata/revenue")
+      .get("https://royal-xy66.onrender.com/api/totaldata/revenue")
       .then((res) => {
         setTotalRevenueValue(res.data.totalRevenue);
       })
@@ -35,7 +35,7 @@ const AnalyticsPage = () => {
 
     //Fetch total clients
     axios
-      .get("http://localhost:4000/api/totaldata/clients")
+      .get("https://royal-xy66.onrender.com/api/totaldata/clients")
       .then((res) => {
         setTotalClientsValue(res.data.totalClients);
       })
@@ -45,7 +45,7 @@ const AnalyticsPage = () => {
 
     //Fetch total orders
     axios
-      .get("http://localhost:4000/api/totaldata/orders")
+      .get("https://royal-xy66.onrender.com/api/totaldata/orders")
       .then((res) => {
         setTotalOrdersValue(res.data.totalOrders);
       })
@@ -58,7 +58,7 @@ const AnalyticsPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/chef");
+        const res = await axios.get("https://royal-xy66.onrender.com/api/chef");
         setChefDetails(res.data);
       } catch (err) {
         console.error("Error fetching food items:", err);
